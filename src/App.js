@@ -1,19 +1,21 @@
 import React, { Component } from 'react';
-import Counter from './Counter'
 import Title from './Title'
+import Navbar from './Navbar'
+import Counter from './Counter'
 import ShoppingList from './ShoppingList'
 import './App.css';
+
 
 class App extends Component {
   render() {
     return (
       <div>
-        <Title title="Hello!" subheading="It's Me" paragraph="Nope" />
-        < Counter />
-        < ShoppingList />
+        < Title title="Birthdays" />
+        < Navbar />
+
       </div>
-    );
+    )
   }
 }
 
-export default App;
+export default App
