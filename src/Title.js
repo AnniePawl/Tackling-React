@@ -1,5 +1,5 @@
 import React from 'react'
-import Clicker from './Clicker'
+import Clicker from './Counter'
 
 const Title = (props) => {
   return (

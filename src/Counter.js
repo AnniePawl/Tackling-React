@@ -1,37 +1,39 @@
-import React, { Component } from 'react';
+import React, { Component } from "react";
+import Title from "./Title";
+import "./Counter.css";
 
+// Define a new Component with a class
+// It must extend Component (which we imported above)
 class Counter extends Component {
-  constructor(props) {
-    super(props)
+  constructor() {
+    super(); // You must call super() in the constructor!
 
-    this.state = { count: 0 }
-
+    // State is an object with properties
+    // In this case there is one property: count
+    this.state = {
+      count: 0
+    };
   }
+
   render() {
     return (
-      <div>
+      <div className="Counter">
+        {/* This element displays the value of this.state.count */}
+        <Title text={this.state.count} />
 
-        <div className='clickers'>
-
-          <div className="totally">
-            <h2 className="count">
-              {this.state.count}</h2>
-            <button className='clicker' on onClick={() => {
-              console.log("it's working")
-              this.setState({ count: this.state.count + 1 })
-            }}>
-              {this.props.button}
-            </button>
-          </div>
-
-
-        </div>
+        {/* This button will change this.state.count each time it is clicked
+        by adding one. You must change state by calling this.setState() */}
+        <button
+          onClick={() => {
+            this.setState({ count: this.state.count + 1 });
+          }}
+          className="Counter--button"
+        >
+          Count
+        </button>
       </div>
-
-    )
+    );
   }
 }
-export default Counter
 
-
-
+export default Counter;

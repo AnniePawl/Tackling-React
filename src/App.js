@@ -1,20 +1,23 @@
-import React, { Component } from 'react';
-import Title from './Title'
-import Navbar from './Navbar'
-import Counter from './Counter'
-import './App.css';
+import React from "react";
+import "./App.css";
+import SVG from "./SVG";
 
+import Counter from "./Counter";
 
-class App extends Component {
-  render() {
-    return (
-      <div>
-        < Title title="Birthdays" />
-        < Navbar />
+function App() {
+  return (
+    <div className="App">
+      <header className="App-header">
+        {/* Counts in 1s */}
+        <Counter />
+        {/* Counts in 5s */}
 
-      </div>
-    )
-  }
+        {/* Counts in 3s */}
+
+        <SVG />
+      </header>
+    </div>
+  );
 }
 
-export default App
+export default App;
