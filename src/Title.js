@@ -1,28 +1,7 @@
-import React from 'react'
-import Clicker from './Counter'
+import React from 'react';
 
-const Title = (props) => {
-  return (
-    <div>
-      <h1 className="title">
-        {props.title}
-      </h1>
-
-      <h2 className="title">
-        {props.subtitle}
-      </h2>
-
-      <h2 className="clicker-heading">Does Anna Got This?
-      </h2>
-
-      <div className="clickers">
-        < Clicker button="Totally" />
-        < Clicker button="Mostly" />
-        < Clicker button="Sort Of" />
-      </div>
-
-    </div>
-  )
+function Title(props) {
+  return <h1>{props.title} {props.text}</h1>;
 }
 
-export default Title
+export default Title;

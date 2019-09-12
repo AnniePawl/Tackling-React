@@ -1,23 +1,53 @@
-import React from "react";
-import "./App.css";
-import SVG from "./SVG";
+import React, { Component } from 'react';
+import './App.css';
+import SVG from './SVG';
+import Counter from './Counter';
+import Title from './Title'
 
-import Counter from "./Counter";
+class App extends Component {
+  constructor(props) {
+    super(props)
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        {/* Counts in 1s */}
-        <Counter />
-        {/* Counts in 5s */}
+    this.state = {
+      count: 0,
+    }
+  }
 
-        {/* Counts in 3s */}
+  render() {
 
-        <SVG />
-      </header>
-    </div>
-  );
+    return (
+      <div className='App' >
+
+        <header className='App-header'>
+
+          {/* Master Counter */}
+          <Title text={this.state.count} />
+
+          {/* Counts by 1 Button */}
+          <Counter increment={1} anything={(n) => {
+            this.setState({ count: this.state.count + n })
+          }} />
+          <div className='line'></div>
+
+          {/* Counts by 3 Button */}
+          <Counter increment={3} anything={() => {
+            this.setState({ count: this.state.count + 3 })
+          }} />
+          <div className='line'></div>
+
+          {/* Counts by 5 Button */}
+          <Counter increment={5} anything={() => {
+            this.setState({ count: this.state.count + 5 })
+
+          }} />
+          <div className='line'></div>
+
+
+          <SVG />
+        </header>
+      </div>
+    );
+  }
 }
 
-export default App;
+export default App

@@ -1,0 +1,6 @@
+.line {
+  widows: 100%;
+  height:2px;
+  background-color: black;
+  margin:10px;
+}
