@@ -3,6 +3,7 @@ import './App.css';
 import SVG from './SVG';
 import Counter from './Counter';
 import Title from './Title'
+import Login from './Login'
 
 class App extends Component {
   constructor(props) {
@@ -17,8 +18,11 @@ class App extends Component {
 
     return (
       <div className='App' >
+        <Login />
+
 
         <header className='App-header'>
+
 
           {/* Master Counter */}
           <Title text={this.state.count} />
