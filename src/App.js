@@ -3,7 +3,9 @@ import './App.css';
 import SVG from './SVG';
 import Counter from './Counter';
 import Title from './Title'
-import Login from './Login'
+import Form from './Form'
+// import Login from './Login'
+import DogNameInput from './Controlled_Components/DogName'
 
 class App extends Component {
   constructor(props) {
@@ -18,7 +20,10 @@ class App extends Component {
 
     return (
       <div className='App' >
-        <Login />
+
+        <Form />
+        {/* <Login /> */}
+        <DogNameInput />
 
 
         <header className='App-header'>
