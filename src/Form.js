@@ -3,6 +3,7 @@ import React, { useState } from 'react'
 function Form(props) {
   const [name, setName] = useState('')
   const [item, setItem] = useState('Loaves')
+  const [weather, setWeather] = useState(null)
 
   return (
     <div>
@@ -24,7 +25,26 @@ function Form(props) {
         <option>Pastry</option>
       </select>
 
-    </div>
+      {/* Get Weather Button */}
+      {/* Fetch  Example */}
+      <button
+        onClick={() => {
+          const baseURL = ''
+          const appid = ''
+          const path = `${baseURL}?q=${name}&appid=${appid}`
+          fetch(path).then(res => res.json()).then(json => { console.log(json) }).catch(err => {
+            console.log(err.message)
+          })
+
+        }}>
+        Get Weather
+      </button>
+
+      <div>
+        {weather ? <p>{weather.main.temp}</p> : <p>;Loading</p>}
+      </div>
+
+    </div >
   )
 }
 
