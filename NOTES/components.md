@@ -1,4 +1,5 @@
 # Components
+Most React Apps have many small components that are all loaded into the main `app` component
 
 ## Render Method
 Render Method looks like this: ```render()``` <br>
