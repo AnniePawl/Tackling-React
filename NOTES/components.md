@@ -1,5 +1,24 @@
 # Components
-Most React Apps have many small components that are all loaded into the main `app` component
+Components are the core of React ! <br/>
+Most React Apps have many small components that are all loaded into the main `app` component. Becuase JSX componenets represent HTML, you can put several componenets together to create a more complex HTML page. <br/>
+
+**There are 2 Ways to Create a React Component:** 
+1. Use a **JavaScript function**, which creates a **stateless functional component**.
+2. Use **ES6 class** syntax.
+
+## Stateless Componenet 
+ Think of this component as one that can receive data and render it, but does not manage or track changes to data. To create componenet with function, simply write a JS function that returns either JSX or null. Remember, React requires function name to start with capital eltter. 
+
+ ```jsx
+ const MyComponenet = 
+ function(){
+   return(
+    <div>
+    <h1>My Function!</h1>
+    </div>
+   )
+ }
+ ```
 
 ## Render Method
 Render Method looks like this: ```render()``` <br>
@@ -10,7 +29,12 @@ It takes *input data* and *returns what to display*
 
 ### A Simple Example
 
-```class HiMessage extends React.Component {
+```jsx
+class HiMessage extends React.Component {
+  constructor(props){
+    super(props);
+  }
+
   render() {
     return(
       <div>

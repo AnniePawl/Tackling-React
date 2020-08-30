@@ -1,5 +1,6 @@
 # What is React?
-Simply put, React is a JavaScript Library for building user interfaces.
+Simply put, React is a JavaScript Library for building user interfaces. Open source view library created and maintained by Facebook. 
+- Uses syntax extension of JavaScript valled JSX 
 
 ## Why is it great?
 **Declarative:** Simple views for each state that efficiently update and render when data changes <br>
