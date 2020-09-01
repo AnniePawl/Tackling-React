@@ -8,8 +8,11 @@ A typical React componenet is an ES6 class that extends `React.Component`. It ha
 1. Use a **JavaScript function**, which creates a **stateless functional component**.
 2. Use **ES6 class** syntax.
 
-## Stateless Componenet 
- Think of this component as one that can receive data and render it, but does not manage or track changes to data. To create componenet with function, simply write a JS function that returns either JSX or null. Remember, React requires function name to start with capital eltter. 
+## Stateless Functional Componennt 
+Any function that accepts props and returns JSX
+
+## Stateless Component 
+ Think of this component as one that can receive data and render it, but does not manage or track changes to data. It's a class that extends `React.Component`, but does not use internal state. To create componenet with function, simply write a JS function that returns either JSX or null. Remember, React requires function name to start with capital letter. 
 
  ```jsx
  const MyComponenet = 
@@ -23,7 +26,7 @@ A typical React componenet is an ES6 class that extends `React.Component`. It ha
  ```
 
  ### Pass Props to Stateless Functional Component 
- 
+
 
 ## Render Method
 Render Method looks like this: ```render()``` <br>
@@ -55,7 +58,7 @@ ReactDom.render(
   );
   ```
 ## Stateful Component
-A component can also maintain **internal state data**
+A component can also maintain **internal state data**. Try to minimize statefulness by using stateless functional components when possible. This helps cintain state management to specific area of app and improves development and maintenance of app by making it easier to follow how changes to state affect its behavior. 
 <br>
 When component's state data changes, rendered markup will be updated by re-invoking ```render()```
 <br>
