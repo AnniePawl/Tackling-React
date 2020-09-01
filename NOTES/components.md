@@ -2,6 +2,8 @@
 Components are the core of React ! <br/>
 Most React Apps have many small components that are all loaded into the main `app` component. Becuase JSX componenets represent HTML, you can put several componenets together to create a more complex HTML page. <br/>
 
+A typical React componenet is an ES6 class that extends `React.Component`. It has a render method that returns HTML(from JSX) or null. 
+
 **There are 2 Ways to Create a React Component:** 
 1. Use a **JavaScript function**, which creates a **stateless functional component**.
 2. Use **ES6 class** syntax.
@@ -19,6 +21,9 @@ Most React Apps have many small components that are all loaded into the main `ap
    )
  }
  ```
+
+ ### Pass Props to Stateless Functional Component 
+ 
 
 ## Render Method
 Render Method looks like this: ```render()``` <br>
