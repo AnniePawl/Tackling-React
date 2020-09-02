@@ -6,7 +6,7 @@ class Button extends Component {
 		this.state = {
 			name: 'Initial State'
 		};
-		// Explicitly bind `this` keyboard to `handleClick()` method in constructor so method is not undefined
+		// Explicitly bind `this` keyword to `handleClick()` method in constructor so method is not undefined
 		this.handleClick = this.handleClick.bind(this);
 	}
 	handleClick() {
