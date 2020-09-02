@@ -30,3 +30,11 @@ Class method usually needs `this` keybowrd to access properties on class (like s
 ```
 
 ## Toggle Element
+What happens if we need to know previous state when updating state? Since state updates may be asynchronous, React might batch mulitple setState() calls into single update-- so we can't rely on previous value of `this.state` or `this.props`. </br>
+Pass `setState` a function that allows access to state and props. Guarantees you are working w/ most current values on state and props. 
+
+```jsx
+this.setState((state,props) => ({
+  counter: state.counter + props.increment
+}))
+```
