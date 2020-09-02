@@ -2,61 +2,65 @@ import React, { Component } from 'react';
 import './App.css';
 import SVG from './SVG';
 import Counter from './Counter';
-import Title from './Title'
-import Form from './Form'
+import Title from './Title';
+import Form from './Form';
 // import Login from './Login'
-import DogNameInput from './Controlled_Components/DogName'
+import DogNameInput from './Controlled_Components/DogName';
+import Campsite from './Examples/Campsite';
 
 class App extends Component {
-  constructor(props) {
-    super(props)
+	constructor(props) {
+		super(props);
 
-    this.state = {
-      count: 0,
-    }
-  }
+		this.state = {
+			count: 0
+		};
+	}
 
-  render() {
+	render() {
+		return (
+			<div className="App">
+				<Campsite />
+				<Form />
+				{/* <Login /> */}
+				<DogNameInput />
 
-    return (
-      <div className='App' >
+				<header className="App-header">
+					{/* Master Counter */}
+					<Title text={this.state.count} />
 
-        <Form />
-        {/* <Login /> */}
-        <DogNameInput />
+					{/* Counts by 1 Button */}
+					<Counter
+						increment={1}
+						anything={(n) => {
+							this.setState({ count: this.state.count + n });
+						}}
+					/>
+					<div className="line" />
 
+					{/* Counts by 3 Button */}
+					<Counter
+						increment={3}
+						anything={() => {
+							this.setState({ count: this.state.count + 3 });
+						}}
+					/>
+					<div className="line" />
 
-        <header className='App-header'>
+					{/* Counts by 5 Button */}
+					<Counter
+						increment={5}
+						anything={() => {
+							this.setState({ count: this.state.count + 5 });
+						}}
+					/>
+					<div className="line" />
 
-
-          {/* Master Counter */}
-          <Title text={this.state.count} />
-
-          {/* Counts by 1 Button */}
-          <Counter increment={1} anything={(n) => {
-            this.setState({ count: this.state.count + n })
-          }} />
-          <div className='line'></div>
-
-          {/* Counts by 3 Button */}
-          <Counter increment={3} anything={() => {
-            this.setState({ count: this.state.count + 3 })
-          }} />
-          <div className='line'></div>
-
-          {/* Counts by 5 Button */}
-          <Counter increment={5} anything={() => {
-            this.setState({ count: this.state.count + 5 })
-
-          }} />
-          <div className='line'></div>
-
-
-          <SVG />
-        </header>
-      </div>
-    );
-  }
+					<SVG />
+				</header>
+			</div>
+		);
+	}
 }
 
-export default App
+export default App;
