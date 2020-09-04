@@ -8,6 +8,8 @@ function Counters() {
 		<div className='counters__container'>
 			<h1>Classic Counter</h1>
 			<IncrementDecrementReset/>
+
+	
 		</div>
 	);
 }

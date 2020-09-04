@@ -34,14 +34,16 @@ h1 {
 .count {
   font-size: 50px;
   font-weight: 800;
-  margin:5px;
+  margin:0px;
   color:$orange;
 }
 
 // Button Style
 .count_buttons {
-  margin-top: 10px;
-
+  height: 105px;
+  margin-top: 5px;
+  @include centerFlex();
+  flex-direction: column;
 }
 
 .count_button {
@@ -52,13 +54,32 @@ h1 {
   color:white;
   border-radius: 5px;
   height: 40px;
+  width:85px;
   border:transparent;
 }
+
+.reset {
+  width: 60px;
+  height: 30px;
+  background-color:$orange;
+  color:$darkBlue;
+}
+
+.reset:hover {
+  background-color:$lightBlue;
+}
+
 
 button:hover {
   background-color: $orange;
   color:$darkBlue;
 }
+ 
 
+hr {
+  margin: 15px;
+  border:1px solid $darkBlue;
+  width: 75vw;
+}
 
 

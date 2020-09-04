@@ -30,13 +30,16 @@ class IncrementDecrementReset extends Component {
 			<div className= 'count_container'>
 				<h1 className='count'>{this.state.count}</h1>
 				<div className='count_buttons'>
-					{/* Increment Button */}
-					<button class='count_button'onClick = {(e)=> this.increment(e)}>increment</button>
-					{/* Decrement Button */}
-					<button class='count_button'onClick ={(e)=> this.decrement(e)}>decrement</button>
-					{/* Reset Button */}
-					<button class='count_button'onClick={(e)=> this.reset(e)}>reset</button>
+						<div className='incdec'>
+						{/* Decrement Button */}
+						<button class='count_button'onClick ={(e)=> this.decrement(e)}>decrement</button>
+						{/* Increment Button */}
+						<button class='count_button'onClick = {(e)=> this.increment(e)}>increment</button>
+						</div> 
+						{/* Reset Button */}
+						<button class='count_button reset'onClick={(e)=> this.reset(e)}>reset</button>
 				</div>
+				<hr/>
 			</div>
 		)
 	}
