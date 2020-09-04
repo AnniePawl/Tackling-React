@@ -1,50 +1,45 @@
-import React, { Component } from 'react';
+import React, {Component} from 'react'
 
-class ClassicCounter extends React.Component {
-	constructor(props) {
+class IncrementDecrementReset extends Component {
+	constructor(props){
 		super(props);
 		this.state = {
-			count: 0
-		};
+			count:0
+		}
 	}
-
-	// change code below this line
-
-	increment() {
-		this.setState({
-			count: this.state.count + 1
-		});
-	}
-
-	decrement() {
-		this.setState({
-			count: this.state.count - 1
-		});
-	}
-
-	reset() {
-		this.setState({
-			count: 0
-		});
-	}
-
-	// change code above this line
-	render() {
-		return (
-			<div>
-				<button className="inc" onClick={(e) => this.increment(e)}>
-					Increment!
-				</button>
-				<button className="dec" onClick={(e) => this.decrement(e)}>
-					Decrement!
-				</button>
-				<button className="reset" onClick={(e) => this.reset(e)}>
-					Reset
-				</button>
-				<h1>Current Count: {this.state.count}</h1>
+		// Increment Method 
+		increment(){
+			this.setState({
+				count:this.state.count + 1
+			})
+		}
+		// Decrement Method 
+		decrement(){
+			this.setState({ 
+				count: this.state.count -1 
+			});
+		}
+		// Reset Method
+		reset() {
+			this.setState({
+				count: 0
+			})
+		}
+	render(){
+		return(
+			<div className= 'count_container'>
+				<h1 className='count'>{this.state.count}</h1>
+				<div className='count_buttons'>
+					{/* Increment Button */}
+					<button class='count_button'onClick = {(e)=> this.increment(e)}>increment</button>
+					{/* Decrement Button */}
+					<button class='count_button'onClick ={(e)=> this.decrement(e)}>decrement</button>
+					{/* Reset Button */}
+					<button class='count_button'onClick={(e)=> this.reset(e)}>reset</button>
+				</div>
 			</div>
-		);
+		)
 	}
 }
 
-export default ClassicCounter;
+export default IncrementDecrementReset

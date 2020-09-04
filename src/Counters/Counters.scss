@@ -1,21 +1,64 @@
+// Variables
 $Oswald: 'Oswald', sans-serif;
-$blue: #314559;
+$darkBlue: #314559;
+$lightBlue:#a8dadc;
+$orange: #eda745;
 
+// Mixins
 @mixin centerFlex {
   display:flex;
   align-items: center;
   justify-content: center;;
-  
 }
 
 .counters__container {
-  @include centerFlex()
+  @include centerFlex();
+  flex-direction: column;
 
 }
 
+// count value, buttons
+.count_container {
+  @include centerFlex(); 
+  flex-direction: column;
+}
 
 h1 {
   font-family: $Oswald;
   text-transform: uppercase;
-  color:$blue
+  color:$darkBlue;
+  margin-bottom: 5px;
+  font-size: 40px;
 }
+
+.count {
+  font-size: 50px;
+  font-weight: 800;
+  margin:5px;
+  color:$orange;
+}
+
+// Button Style
+.count_buttons {
+  margin-top: 10px;
+
+}
+
+.count_button {
+  margin:5px;
+  text-transform: uppercase;
+  font-family: $Oswald;
+  background-color: $darkBlue;
+  color:white;
+  border-radius: 5px;
+  height: 40px;
+  border:transparent;
+}
+
+button:hover {
+  background-color: $orange;
+  color:$darkBlue;
+}
+
+
+
