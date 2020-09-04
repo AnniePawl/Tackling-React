@@ -6,9 +6,8 @@ import Title from './Title';
 import Form from './Form';
 // import Login from './Login'
 import DogNameInput from './Controlled_Components/DogName';
-import Campsite from './Examples/Campsite';
-import SimpleCounter from './SimpleCounter';
-import SimpleOnClick from './Buttons/SimpleOnClick';
+import Buttons from './Buttons/Buttons';
+import Button from './Button';
 
 class App extends Component {
 	constructor(props) {
@@ -22,9 +21,9 @@ class App extends Component {
 	render() {
 		return (
 			<div className="App">
-				<SimpleOnClick />
-
-				<SimpleCounter />
+				<div>
+					<Buttons />
+				</div>
 				<Form />
 				{/* <Login /> */}
 				<DogNameInput />
